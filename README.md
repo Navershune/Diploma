@@ -28,7 +28,7 @@
    ```
    java "-Dspring.datasource.url=jdbc:postgresql://localhost:5432/app" -jar artifacts/aqa-shop.jar
    ```
-   .
+   
 1. Убедиться в готовности системы. Сервис должен быть доступен по адресу:
 ```
 http://localhost:8080/
