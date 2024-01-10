@@ -6,6 +6,8 @@
 # Тестовая документация
 
 - [План автоматизации тестирования веб-формы сервиса покупки туров интернет-банка](https://github.com/Navershune/Diploma/blob/main/Documentation/Plan.md)
+- [Отчёт о проведённом тестировании](https://github.com/Navershune/Diploma/blob/main/Documentation/Report.md)
+- [Отчет о проведенной автоматизации](https://github.com/Navershune/Diploma/blob/main/Documentation/Summary.md)
 
 ## Запуск приложения
 ### Подготовительный этап
