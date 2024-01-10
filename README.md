@@ -22,14 +22,35 @@
 1. В новой вкладке терминала запустить тестируемое приложение:
     * Для MySQL:
    ```
-   java "-Dspring.datasource.url=jdbc:mysql://localhost:3306/app" -jar artifacts/aqa-shop.jar
+   java -jar artifacts/aqa-shop.jar --spring.datasource.url=jdbc:mysql://localhost:3306/app
    ```
-    * Для PostgreSQL:
+   
+      * Для PostgreSQL:
    ```
-   java "-Dspring.datasource.url=jdbc:postgresql://localhost:5432/app" -jar artifacts/aqa-shop.jar
+   java -jar artifacts/aqa-shop.jar --spring.datasource.url=jdbc:postgresql://localhost:5432/app
    ```
    
 1. Убедиться в готовности системы. Сервис должен быть доступен по адресу:
 ```
 http://localhost:8080/
 ```
+
+### Запуск тестов
+1. В новой вкладке терминала ввести команду в зависимости от запущенной БД в п.2 Запуска:
+   
+  * Для MySQL:
+```
+.\gradlew clean test -DdbUrl=jdbc:mysql://localhost:3306/app
+```
+  * Для PostgreSQL:
+```
+.\gradlew clean test -DdbUrl=jdbc:postgresql://localhost:5432/app
+```
+
+### Формирование отчета по результатам тестирования
+1. Для получения отчета ввести в терминале команду
+```
+.\gradlew allureServe
+```
+2. Чтобы закрыть отчет, требуется ввести команду ``Ctrl + C``, чтобы подтвердить выход, необходимо ввести ``Y``
+3. Для остановки работы контейнеров ввести команду ``docker-compose down``
